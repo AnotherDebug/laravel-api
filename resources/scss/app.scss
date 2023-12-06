@@ -1,1 +1,132 @@
 @import '~bootstrap/scss/bootstrap'
+
+;header {
+    height: 60px;
+}
+
+.main-wrapper {
+    height: calc(100vh - 60px);
+}
+
+aside {
+    .sidebar {
+        width: 250px;
+        height: 100%;
+        ul {
+            li {
+                a {
+                    &:hover i {
+                        color: greenyellow;
+                        transition: 1s;
+                    }
+
+                    &:hover {
+                        background-color: $blue;
+                        transition: 1s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ad-green {
+    color: greenyellow;
+}
+
+.adminHome {
+    width: 100%;
+}
+
+.projectList, .typeProjectList {
+    width: calc(100% - 250px);
+    overflow-y: auto;
+    .table {
+        tbody {
+            tr {
+                td:nth-child(4) {
+                a {
+                    color: black;
+                    padding: 5px;
+                                border-radius: 10px;
+                    &:hover {
+                        color: greenyellow;
+                        transition: 0.5s;
+                    }
+                }
+                }
+                td {
+                    ul {
+                        li {
+                            a {
+
+                                padding: 5px;
+                                border-radius: 10px;
+                                &:hover {
+                                    background-color: greenyellow ;
+
+                                    transition: 1s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.create {
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    .ck-editor__editable {
+        min-height: 200px;
+    }
+    // #description {
+    //     min-height: 200px;
+    // }
+}
+
+.edit {
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    .ck-editor__editable {
+        min-height: 200px;
+    }
+}
+
+.technologyList {
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    .form-hidden {
+        width: 100%;
+        border: none;
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+.typesList {
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    .form-hidden {
+        width: 100%;
+        border: none;
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+.projectDetail {
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+}
