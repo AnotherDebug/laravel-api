@@ -31,7 +31,12 @@
                         <td>{{ $project->id }}</td>
                         <td>{{ $project->name }}</td>
                         <td>{{ date('d/m/Y', strtotime($project->date_start)) }}</td>
-                        <td><a href="{{ route('admin.type-projects', $project->type) }}" class=" text-decoration-none ">{{ $project->type?->name ?? '-' }}</a></td>
+                        <td>
+                            <a href="{{ $project->type ? route('admin.type-projects', $project->type) : '#' }}" class="text-decoration-none">
+                                {{ $project->type ? $project->type->name : '-' }}
+                            </a>
+                        </td>
+                        {{-- <td><a href="{{ route('admin.type-projects', $project->type) }}" class=" text-decoration-none ">{{ $project->type?->name ?? '-' }}</a></td> --}}
                         <td>
                             @forelse ($project->technologies as $technology)
                             <a href="{{ route('admin.projects-technologies', $technology) }}" class="badge text-bg-primary text-decoration-none ">{{ $technology->name }}</a>
