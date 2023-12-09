@@ -15,9 +15,9 @@ class ProjectController extends Controller
         return response()->json($projects);
     }
 
-    public function getProject($id)
+    public function getProject($slug)
     {
-        $project = Project::where('id', $id)->with('type', 'technologies')->first();
+        $project = Project::where('slug', $slug)->with('type', 'technologies')->first();
 
         if ($project['image']) {
 

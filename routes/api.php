@@ -17,4 +17,4 @@ use App\Http\Controllers\Api\ProjectController;
 
 Route::get('/projects', [ProjectController::class, 'index']);
 
-Route::get('/project/{id}', [ProjectController::class, 'getProject']);
+Route::get('/project/{slug}', [ProjectController::class, 'getProject']);
