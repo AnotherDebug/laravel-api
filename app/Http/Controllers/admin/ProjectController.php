@@ -151,6 +151,8 @@ class ProjectController extends Controller
 
         if (array_key_exists('technologies', $form_data)) {
             $project->technologies()->sync($form_data['technologies']);
+        }else {
+            $project->technologies()->detouch($form_data['technologies']);
         }
 
 
